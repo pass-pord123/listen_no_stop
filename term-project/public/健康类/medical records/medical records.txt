@@ -1,0 +1,14 @@
+The research was carried out by studying the medical records of some 17m people on the books of gps in England and the 5,683 covid-attributable deaths therein. 
+GPS are the first port of call in England’s National Health Service (nhs) for any nonemergency matter, and thus hold the most complete records of patients’ health.
+studying these at this scale and degree of detail, with individual records linked up to causes of death, has never been done before. 
+Merely making plans to meddle with such primary-care data has been a cause of great national concern in Britain in the past.
+Dr Goldacre’s research was possible only because of the incentives created by the andemic,
+and the ingenuity of the group of epidemiologists and data scientists he assembled, who call themselves the Opensafely Collective. 
+In normal circumstances, merely obtaining permission to look at such a trove of sensitive health data would take months, perhaps years 
+of jumping through hoops held by ethics committees, computer-security checkers and so on. 
+Running the analysis and getting it published might take months more.
+These are not, though, normal circumstances, and in fact it took Opensafely a mere 42 days to go from idea to publication.
+Three factors made this pace possible.
+The first is the existence of notices, signed by the country’s health minister, Matt Hancock,
+which give a wide range of people within the nhs broad licence to have access to and process health data in connection with fighting covid-19.
+These Control of Patient Information (COPI) notices make it much easier to get data wrangling done.

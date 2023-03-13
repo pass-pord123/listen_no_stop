@@ -1,0 +1,14 @@
+Science & technology 
+Health data and privacy 
+The pandemic has sparked a new way to study sensitive medical records 
+On may 7th an article appeared on medRxiv, an online repository for medical research. 
+It showed, for England at least, the degrees to which sars-cov-2, the virus that causes covid-19, discriminates in its deadliness between various groups of people. 
+Men are more likely to die than women. The old and the socially deprived more likely than the young, well-off and well-connected.
+Those with uncontrolled diabetes or severe asthma, more likely than those without.
+And members of the country’s ethnic minorities more likely than those of its white majority.
+None of these, even the first (for men are more vulnerable than women to quite a wide range of infections), is exactly a surprise.
+Even the finding that current smokers actually have a lower risk of death from the illness than do non-smokers, though superficially arresting,
+is in line with the results of other studies that used different methods—though a possible protective effect on asthma patients of steroid inhalers looks worth following up.
+But the actual results of this study are not really the remarkable thing about it.
+That, according to its lead author Ben Goldacre, a clinician and data scientist at the University of Oxford, is the method of analysis by which they were obtained.
+Instead of extracting sensitive patient records from the databases of the company which manages them on behalf of general practitioners (gps, Britain’s network of family doctors), the team behind the paper developed a suite of software that lets them run their massive analysis on the data in situ.

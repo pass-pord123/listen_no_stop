@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>注册</title>
+    <link href="https://fonts.font.im/css?family=Monoton" rel="stylesheet">
+</head>
+
+<style>
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    background-image: linear-gradient(to bottom right, rgb(174, 175, 238),rgb(48, 50, 185));
+}
+
+.name{
+    margin-top: 4%;
+    left: 50%;
+    text-align: center;
+    color: rgb(40, 34, 109);
+}
+
+.en{
+    font-family: "Monoton", cursive;
+    font-size: 75px;
+}
+
+.ch{
+    font-size: 25px;
+}
+
+.login-container {
+    width: 600px;
+    margin: 0 auto;
+    height: 100%;
+    margin-top: 4%;
+    border-radius: 15px;
+    box-shadow: 0 10px 50px 0px rgb(43, 37, 117);
+    background-color: rgb(72, 87, 173);
+}
+
+
+.left-container{
+    display: inline-block;
+    width: 330px;
+    height: 160px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    padding: 60px;
+    background-image: linear-gradient(to bottom right, rgb(47, 70, 177),rgb(126, 111, 179));
+}
+
+.title{
+    color: #fff;
+    font-size: 18px;
+    border-bottom: 3px solid rgb(237,221,22);
+}
+
+.input-container{
+    padding: 10px 0;
+}
+
+.input-container input{
+    border: 0;
+    background: none;
+    outline: 0;
+    color: #fff;
+    margin: 20px 0;
+    display: block;
+    width: 100%;
+    border-bottom: 1px solid rgb(199,191,219);
+    transition: .2s;
+}
+
+.message-container{
+    font-size: 14px;
+    transition: .2s;
+    color: rgb(199,191,219);
+    cursor: pointer;
+}
+
+.input-container input:hover{
+    border-bottom-color: #fff;
+}
+
+::-webkit-input-placeholder{
+    color: rgb(199,191,219);
+}
+
+.action-container{
+    height: 100%;
+    position: relative;
+    margin-left: 235px;
+}
+
+.span{
+    border: 2px solid rgb(237,221,22);
+    padding: 10px;
+    line-height: 25px;
+    border-radius: 25px;
+    position: absolute;
+    transition: 0.2s;
+    cursor: pointer;
+    background-color: unset;
+    margin-left: 40px;
+    color:#fff;
+}
+
+.span:hover{
+    background-color: rgb(237,221,22);
+    color: rgb(95,76,104)
+}
+
+a{
+    color: rgb(36, 47, 99);
+}
+label{
+     color: red;
+}
+</style>
+
+<body>
+  <div class="name">
+    <span class="en">TEM4-Dictation</span><br>
+        <span class="ch">专四听写训练网站</span>
+    </div>
+    <div class="login-container">
+      <form action="/register" method="post">
+        <div class="left-container">
+            <div class="title"><span>注册</span></div>
+            <div class="input-container">
+                <input type="text" name="username"id="username" placeholder="用户名">
+
+                <input type="password" name="password" id="password" placeholder="密码">
+
+                <div class="action-container">
+                    <button type="submit" class="span" id="popBox">注册</button>
+                </div>
+            </div>
+            <div class="message-container">
+                <span>已有账号？</span><a href="/log"><span>登录</span></a>
+            </div>
+        </div>    
+    </div>
+    </form>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
+ <script>
+    document.getElementById("username").onkeyup = function () {
+    let hint = document.getElementById("hint");
+    $.get("/checkuser", { "username": this.value }).done(function (data) {
+        if (data['available']) {
+            hint.innerText = "";
+        } else {
+            alert ("用户名已经有人用啦，小主换一个吧!");
+        }
+    });
+}
+       var ipt = document.getElementById('password');
+        ipt.onblur = function() {
+            if (this.value.length !=6) {
+                ipt.className = 'message wrong';
+                alert ('密码只能为六个');
+            } else {
+                ipt.className = 'message right';
+                /*message.innerHTML = '输入正确';*/
+            }
+        }
+</script> 
+</body>
+</html>
+

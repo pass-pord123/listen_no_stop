@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<link href="https://fonts.font.im/css?family=Monoton" rel="stylesheet">
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>听写不停歇</title>
+  <style>
+    body {
+      margin: 0;
+    }
+
+    .lian ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-image: linear-gradient(to bottom right, rgb(47, 70, 177),rgb(126, 111, 179));
+      position: sticky;
+      position: -webkit-sticky;
+      /* Safari */
+      top: 0;
+      width: 100%;
+
+    }
+
+    .lian span {
+      float: left;
+    }
+
+    .lian span a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    .lian span a:hover:not(.active) {
+      background-color: rgb(146, 185, 240);
+    }
+
+    .sou input[type=text] {
+      width: 70%;
+      box-sizing: border-box;
+      border: 2px solid #ccc;
+      border-radius: 2px;
+      font-size: 10px;
+      background-color: white;
+      background-image: url('searchicon.png');
+      background-position: 10px 10px;
+      background-repeat: no-repeat;
+      padding: 12px 20px 12px 40px;
+      height: 23px;
+      margin-top: 9px;
+    }
+
+    .searchbutton {
+      width: 23%;
+      border-radius: 5px;
+      height: 30px;
+    }
+
+    .searchbutton:hover {
+      background-color: rgb(182, 206, 240);
+    }
+
+    .contain {
+      height: 100%;
+      width: 100%;
+      display: inline;
+    }
+
+    h {
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      font-size: 40px;
+      margin-left: 140px;
+      margin-top: 70px;
+      color: royalblue;
+      font-weight: bolder;
+
+    }
+
+    .root ul {
+      list-style-type: none;
+      color: black;
+      position: absolute;
+      margin-left: 150px;
+      margin-top: 30px;
+
+    }
+
+    .root li {
+      float: left;
+      margin-left: 100px;
+    }
+
+    .root {
+      background-color:#fff;
+      opacity: 0.2;
+      height: 100px;
+      width: 100%;
+    }
+
+    .wei {
+      background-color:#fff ;
+      height: 100px;
+      width: 100%;
+      color: black;
+      opacity: 0.2;
+      text-align: center;
+    }
+
+    #biao1 {
+      margin-left: 20px;
+      width: 55px;
+      margin-top: 5px;
+    }
+
+
+    .title {
+      font-family: "Monoton", cursive;
+      font-size: 35px;
+      margin-top: 10px;
+    }
+
+    .sou{
+      margin-top: 15px;
+    }
+
+    a {
+      color: black;
+      text-decoration: none;
+      margin-top: 15px;
+    }
+
+    .row {
+    display: inline-block;
+    text-align: center;
+  }
+  .aa {
+    text-align: center;
+    font-size:13px;
+  }
+
+  .container {
+    text-align: center;
+  }
+  </style>
+</head>
+
+<body>
+  <div class="lian">  
+    <ul>
+      <span><img id="biao1" src="/1.png" alt="tu"></span>
+      <span class="title">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TEM4-Dictation</span>
+      <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+      <span><a href="/news">资讯</a></span>
+      <span><a href="/contact">联系</a></span>
+      <span><a href="/about">关于我们</a></span>
+      <span style="float:right">
+        <form class="sou">
+
+          <input type="text" name="search" placeholder="搜索相关..">
+          <input type="submit" value="搜索" class="searchbutton">
+        </form>
+
+      </span>
+
+      <span style="float:right"><a href="/logout">退出</a></span>
+
+    </ul>
+  </div>
+
+
+  {{{body}}}
+
+  <hr>
+  <div class="ba">
+    <div class="root">
+
+      <ul>
+        <li>关于本站</li>
+        <li>联系我们</li>
+        <li>订阅服务</li>
+        <li>法律声明</li>
+        <li>人才招聘</li>
+        <li>意见反馈</li>
+
+    </div>
+    <div class="footer">
+		<div class="wei">
+
+				<div class="aa">
+					<p>中国广州市白云区白云大道北2号 510420 (北校区)</p>
+				</div>
+				<div class="aa">
+					<p>违法和不良信息举报电话：010-53391121 | 举报邮箱：db@cyzone.cn</p>
+				</div>
+        <div class="aa">All rights reserved.</div>
+			</div>
+		</div>
+</body>
+</html>

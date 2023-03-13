@@ -1,0 +1,53 @@
+
+ {{#each listen }}
+
+<div id="display"></div>
+<pre id="display"></pre>
+<style>
+  #display{
+    margin-top: 50px;
+  margin-left: 300px;
+  background-color: rgb(115, 250, 250);
+  width: 50%;
+  }
+</style>
+<script src="/diff.js"></script>
+
+<script>
+  let con = document.getElementById("con")
+  const one = "{{this.origin}}"
+  other = "{{this.neirong}}"
+  color = '';
+
+  let span = null;
+
+  const diff = Diff.diffChars(one, other),
+    display = document.getElementById('display'),
+    fragment = document.createDocumentFragment();
+
+  diff.forEach((part) => {
+   //green for additions, red for deletions
+   //grey for common parts
+    const color = part.added ? 'green' :
+      part.removed ? 'red' : 'grey';
+    span = document.createElement('span');  
+    span.style.color = color;
+    span.appendChild(document
+     .createTextNode(part.value));
+    fragment.appendChild(span);
+    }); 
+
+    {{!-- div = document.createElement('div');
+    div.style.color = color
+    div.style.width = "200px"
+    div.style.heigth = "400px"
+    div.style.backgroundcolor = 'red'
+    div.appendChild(document
+      .createTextNode(part.value));
+    fragment.appendChild(div); 
+  });  --}}
+  display.appendChild(fragment);
+</script>
+
+{{/each}}
+
